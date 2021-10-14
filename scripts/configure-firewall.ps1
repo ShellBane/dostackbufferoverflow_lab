@@ -1,0 +1,1 @@
+New-NetFirewallRule -DisplayName 'dostackbufferoverflowgood' -LocalPort 31337 -Action Allow -Protocol TCP -Direction Inbound
