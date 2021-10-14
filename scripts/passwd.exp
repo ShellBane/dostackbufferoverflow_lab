@@ -1,0 +1,18 @@
+#!/usr/bin/expect
+
+set arg1 [lindex $argv 0]
+set arg2 [lindex $argv 1]
+
+spawn passwd $arg1
+
+expect "New password:"
+sleep 1
+send "$arg2\r"
+
+expect "Retype new password:"
+sleep 1
+send "$arg2\r"
+
+expect "passwd: password updated successfully"
+
+expect eof
